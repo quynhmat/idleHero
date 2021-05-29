@@ -232,7 +232,7 @@ AnimatorStateMachine:
     m_Position: {x: 1176, y: -336, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102860813799920808}
-    m_Position: {x: 936, y: -336, z: 0}
+    m_Position: {x: 930, y: -340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102461355796591810}
     m_Position: {x: 1416, y: -336, z: 0}
@@ -563,7 +563,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Passive
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101644077183465384}
@@ -617,7 +617,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack
-  m_Speed: 1
+  m_Speed: 1.3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101530477294877606}

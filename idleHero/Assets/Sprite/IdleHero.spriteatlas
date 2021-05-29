@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IdleHero
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e26fdb9da8664ae44a618b4bff84d3f2, type: 3}
+    totalSpriteSurfaceArea: 114234
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6712af209dd77e74490cbdc0abe4e821, type: 3}
+  - {fileID: 21300000, guid: e1f08b11ed114c745aabab5f3442fd6f, type: 3}
+  - {fileID: 21300000, guid: f41643831a283cc45878d57512744012, type: 3}
+  - {fileID: 21300000, guid: fc0147062d3f0c1489a08cb46ee06808, type: 3}
+  - {fileID: 21300000, guid: dbf6c5e6150afa24cb9c118fbbe6fed1, type: 3}
+  - {fileID: 21300000, guid: 09cb365809aef4a4a95d221fa40ab90d, type: 3}
+  - {fileID: 21300000, guid: 38d593e85697bf1488511186b8c3b608, type: 3}
+  - {fileID: 21300000, guid: b7c0035be844eda4a852165ba63a22e9, type: 3}
+  - {fileID: 21300000, guid: 36722c9b39e234549b18187a4cb62612, type: 3}
+  - {fileID: 21300000, guid: 38641efb0c15cea46a1da39356682645, type: 3}
+  - {fileID: 21300000, guid: 3454b4cc91f4d944987b37c01c600b8f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - coin-money-2
+  - i_power
+  - 6
+  - 3
+  - 7
+  - 2
+  - base
+  - 4
+  - 1
+  - 5
+  - lock
+  m_Tag: IdleHero
+  m_IsVariant: 0
