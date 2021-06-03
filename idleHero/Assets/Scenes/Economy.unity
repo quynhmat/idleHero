@@ -1757,7 +1757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456061746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2256,7 +2256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &563503703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13184,8 +13184,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 72.5, y: -60.420006}
-  m_SizeDelta: {x: 160, y: 49.76001}
+  m_AnchoredPosition: {x: 72.5, y: -60.42001}
+  m_SizeDelta: {x: 428.1, y: 49.76001}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &964850534
 MonoBehaviour:
@@ -20336,7 +20336,9 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.FloatOperator
         - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.ConvertFloatToString
         - HutongGames.PlayMaker.Actions.UiTextSetText
         - HutongGames.PlayMaker.Actions.UiButtonOnClickEvent
         customNames:
@@ -20344,10 +20346,12 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 00000000
-        actionStartIndex: 00000000050000000a0000000e000000
-        actionHashCodes: b2cf10001418090309fbab0443e24103
+        - 
+        - 
+        actionEnabled: 010100010101
+        actionIsOpen: 000100010101
+        actionStartIndex: 00000000050000000a0000000f0000001300000017000000
+        actionHashCodes: b2cf10000cdb0405141809033523200209fbab0443e24103
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -20415,7 +20419,19 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name: moneyEarn
+          name: TextMoneyEarn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: f
+        - useVariable: 1
+          name: TextMoneyEarn
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -20424,7 +20440,31 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: reward_time
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: SpeedMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: moneyEarn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: moneyEarn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams:
         - useVariable: 1
           name: reward_time
@@ -20439,7 +20479,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: moneyEarn
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -20470,22 +20510,31 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - Unlock
-        byteData: 0000020000000000
+        byteData: 0000020000000002000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000011000000110000000100000001000000100000001000000007000000100000000100000014000000120000001100000001000000140000001f00000017000000
+        paramDataType: 14000000110000001100000001000000010000000f0000000f000000070000000f0000000100000010000000100000000700000010000000010000000f00000012000000120000000100000014000000120000001100000001000000140000001f00000017000000
         paramName:
         - gameObject
         - activate
         - recursive
         - resetOnExit
         - everyFrame
+        - float1
+        - float2
+        - operation
+        - storeResult
+        - everyFrame
         - integer1
         - integer2
         - operation
         - storeResult
+        - everyFrame
+        - floatVariable
+        - stringVariable
+        - format
         - everyFrame
         - gameObject
         - text
@@ -20494,8 +20543,8 @@ MonoBehaviour:
         - gameObject
         - eventTarget
         - sendEvent
-        paramDataPos: 0000000000000000010000000000000001000000000000000100000002000000020000000600000001000000000000000200000007000000020000000000000000000000
-        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000004000000000000000100000000000000000000000000000001000000000000000000000000000000
+        paramDataPos: 00000000000000000100000000000000010000000000000001000000020000000200000006000000000000000100000007000000020000000b0000000300000000000000010000000c0000000100000002000000020000000d000000020000000000000000000000
+        paramByteDataSize: 0000000000000000000000000100000001000000000000000000000004000000000000000100000000000000000000000400000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000
     - name: Wait
       description: 
       colorIndex: 0
@@ -20703,6 +20752,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.FloatAdd
         - HutongGames.PlayMaker.Actions.IntAdd
         - HutongGames.PlayMaker.Actions.RectTransformGetLocalPosition
         - HutongGames.PlayMaker.Actions.ActivateGameObject
@@ -20712,10 +20762,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01000101
-        actionIsOpen: 00000000
-        actionStartIndex: 00000000030000000c00000011000000
-        actionHashCodes: 603dd9052196c300b2cf100073b31903
+        - 
+        actionEnabled: 0100000101
+        actionIsOpen: 0100000000
+        actionStartIndex: 0000000004000000070000001000000015000000
+        actionHashCodes: 2a6e8a00603dd9052196c300b2cf100073b31903
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -20756,6 +20807,18 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
+          name: Money
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: moneyEarn
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
           name: 
           tooltip: 
           showInInspector: 0
@@ -20781,7 +20844,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: moneyEarn
+          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -20841,13 +20904,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000000000000000000
+        byteData: 0000000000000000000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000014000000070000001c000000250000000f0000000f0000000f000000010000000700000014000000110000001100000001000000010000001400000011000000110000001100000011000000
+        paramDataType: 0f0000000f000000010000000100000010000000100000000100000014000000070000001c000000250000000f0000000f0000000f000000010000000700000014000000110000001100000001000000010000001400000011000000110000001100000011000000
         paramName:
+        - floatVariable
+        - add
+        - everyFrame
+        - perSecond
         - intVariable
         - add
         - everyFrame
@@ -20870,8 +20937,8 @@ MonoBehaviour:
         - cacheChildren
         - stopOnExit
         - destroyOnFinish
-        paramDataPos: 0000000001000000000000000000000001000000000000000000000000000000010000000200000005000000060000000100000000000000010000000a0000000b0000000200000002000000030000000400000005000000
-        paramByteDataSize: 00000000000000000100000000000000040000000000000000000000000000000000000000000000010000000400000000000000000000000000000001000000010000000000000000000000000000000000000000000000
+        paramDataPos: 000000000100000000000000010000000000000001000000020000000000000003000000000000000000000002000000030000000400000007000000080000000100000000000000010000000c0000000d0000000200000002000000030000000400000005000000
+        paramByteDataSize: 0000000000000000010000000100000000000000000000000100000000000000040000000000000000000000000000000000000000000000010000000400000000000000000000000000000001000000010000000000000000000000000000000000000000000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -20881,7 +20948,13 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions: []
     variables:
-      floatVariables: []
+      floatVariables:
+      - useVariable: 1
+        name: moneyEarn
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       intVariables:
       - useVariable: 1
         name: Int_Hour
@@ -20931,12 +21004,6 @@ MonoBehaviour:
         showInInspector: 0
         networkSync: 0
         value: 0
-      - useVariable: 1
-        name: moneyEarn
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
       boolVariables: []
       stringVariables:
       - useVariable: 1
@@ -20947,6 +21014,12 @@ MonoBehaviour:
         value: 
       - useVariable: 1
         name: TimeM
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
+      - useVariable: 1
+        name: TextMoneyEarn
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -20982,7 +21055,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -22946,7 +23019,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: Money
+          name: showMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -24059,15 +24132,17 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.FindChild
         - HutongGames.PlayMaker.Actions.FindChild
+        - HutongGames.PlayMaker.Actions.FloatChanged
         - HutongGames.PlayMaker.Actions.IntChanged
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 000000000300000006000000
-        actionHashCodes: f90ba701f90ba7014b932c01
+        - 
+        actionEnabled: 01010100
+        actionIsOpen: 01010000
+        actionStartIndex: 00000000030000000600000009000000
+        actionHashCodes: f90ba701f90ba7016f99bc044b932c01
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -24122,7 +24197,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: SpeedMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams:
         - useVariable: 1
           name: MoneySpeed
@@ -24137,6 +24218,12 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmVector2Params: []
         fsmVector3Params: []
         fsmColorParams: []
@@ -24144,12 +24231,13 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - Go
+        - Go
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000013000000140000001200000013000000100000001700000011000000
+        paramDataType: 1400000012000000130000001400000012000000130000000f0000001700000011000000100000001700000011000000
         paramName:
         - gameObject
         - childName
@@ -24157,11 +24245,14 @@ MonoBehaviour:
         - gameObject
         - childName
         - storeResult
+        - floatVariable
+        - changedEvent
+        - storeResult
         - intVariable
         - changedEvent
         - storeResult
-        paramDataPos: 000000000000000000000000010000000100000001000000000000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 000000000000000000000000010000000100000001000000000000000000000000000000000000000100000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: Wait
       description: 
       colorIndex: 0
@@ -24299,7 +24390,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: MoneySpeed
+          name: SpeedMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -24397,7 +24488,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: MoneySpeed
+          name: SpeedMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25462,17 +25553,19 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.FloatOperator
+        - HutongGames.PlayMaker.Actions.ConvertFloatToString
         - HutongGames.PlayMaker.Actions.BuildString
         - HutongGames.PlayMaker.Actions.UiTextSetText
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000050000000d000000
-        actionHashCodes: 141809037370ae0509fbab04
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000050000000900000011000000
+        actionHashCodes: 0cdb0405352320027370ae0509fbab04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -25491,6 +25584,18 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 1
+          name: showMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: f
         - useVariable: 0
           name: 
           tooltip: 
@@ -25498,7 +25603,7 @@ MonoBehaviour:
           networkSync: 0
           value: ' '
         - useVariable: 1
-          name: showSpeed
+          name: showMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25531,10 +25636,9 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
-        fsmIntParams:
+        fsmFloatParams:
         - useVariable: 1
-          name: MoneySpeed
+          name: SpeedMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25551,6 +25655,13 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: showSpeed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -25570,18 +25681,22 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 03000000000000
+        byteData: 0300000000000000
         arrayParamSizes: 03000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000700000010000000010000000c0000001200000012000000120000001200000011000000120000000100000014000000120000001100000001000000
+        paramDataType: 0f0000000f000000070000000f000000010000000f0000001200000012000000010000000c0000001200000012000000120000001200000011000000120000000100000014000000120000001100000001000000
         paramName:
-        - integer1
-        - integer2
+        - float1
+        - float2
         - operation
         - storeResult
+        - everyFrame
+        - floatVariable
+        - stringVariable
+        - format
         - everyFrame
         - stringParts
         - 
@@ -25595,8 +25710,8 @@ MonoBehaviour:
         - text
         - resetOnExit
         - everyFrame
-        paramDataPos: 0000000001000000000000000200000004000000000000000000000001000000020000000300000000000000040000000500000000000000050000000100000006000000
-        paramByteDataSize: 0000000000000000040000000000000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 000000000100000000000000020000000400000003000000000000000100000005000000000000000200000003000000040000000500000000000000060000000600000000000000070000000100000007000000
+        paramByteDataSize: 000000000000000004000000000000000100000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: UpdateValue
       description: 
       colorIndex: 0
@@ -25621,15 +25736,17 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.ConvertFloatToString
         - HutongGames.PlayMaker.Actions.BuildString
         - HutongGames.PlayMaker.Actions.UiTextSetText
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000008000000
-        actionHashCodes: 7370ae0509fbab04
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000040000000c000000
+        actionHashCodes: 352320027370ae0509fbab04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -25648,6 +25765,18 @@ MonoBehaviour:
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams:
+        - useVariable: 1
+          name: numberSpeed
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: f
         - useVariable: 0
           name: 
           tooltip: 
@@ -25655,7 +25784,7 @@ MonoBehaviour:
           networkSync: 0
           value: ' '
         - useVariable: 1
-          name: MoneySpeed
+          name: numberSpeed
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25688,7 +25817,13 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: SpeedMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -25709,14 +25844,18 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000
+        byteData: 000000
         arrayParamSizes: 03000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmString
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0c0000001200000012000000120000001200000011000000120000000100000014000000120000001100000001000000
+        paramDataType: 0f0000001200000012000000010000000c0000001200000012000000120000001200000011000000120000000100000014000000120000001100000001000000
         paramName:
+        - floatVariable
+        - stringVariable
+        - format
+        - everyFrame
         - stringParts
         - 
         - 
@@ -25729,8 +25868,8 @@ MonoBehaviour:
         - text
         - resetOnExit
         - everyFrame
-        paramDataPos: 000000000000000001000000020000000300000000000000040000000000000000000000050000000100000001000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000100000000000000000000000200000003000000040000000500000000000000060000000100000000000000070000000100000002000000
+        paramByteDataSize: 00000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000
     - name: Check String
       description: 
       colorIndex: 0
@@ -25765,12 +25904,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.IntCompare
+        - HutongGames.PlayMaker.Actions.FloatCompare
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 09faa102
+        - 
+        actionEnabled: 0001
+        actionIsOpen: 0001
+        actionStartIndex: 0000000006000000
+        actionHashCodes: 09faa1021bcdca04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -25785,7 +25926,25 @@ MonoBehaviour:
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
-        fsmFloatParams: []
+        fsmFloatParams:
+        - useVariable: 1
+          name: SpeedMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 10000
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams:
         - useVariable: 1
           name: MoneySpeed
@@ -25809,12 +25968,15 @@ MonoBehaviour:
         - Go
         - FINISHED
         - Go
-        byteData: 00
+        - Go
+        - FINISHED
+        - Go
+        byteData: 0000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 100000001000000017000000170000001700000001000000
+        paramDataType: 1000000010000000170000001700000017000000010000000f0000000f0000000f00000017000000170000001700000001000000
         paramName:
         - integer1
         - integer2
@@ -25822,8 +25984,15 @@ MonoBehaviour:
         - lessThan
         - greaterThan
         - everyFrame
-        paramDataPos: 000000000100000000000000010000000200000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000001000000
+        - float1
+        - float2
+        - tolerance
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos: 00000000010000000000000001000000020000000000000000000000010000000200000003000000040000000500000001000000
+        paramByteDataSize: 00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000001000000
     - name: Wait
       description: 
       colorIndex: 0
@@ -25855,8 +26024,8 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010100
-        actionIsOpen: 010101
+        actionEnabled: 010001
+        actionIsOpen: 010001
         actionStartIndex: 000000000400000007000000
         actionHashCodes: 184b57044b932c016f99bc04
         unityObjectParams: []
@@ -25901,7 +26070,7 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 1
-          name: 
+          name: SpeedMoney
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -25933,7 +26102,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - Go
-        - 
+        - Go
         byteData: 
         arrayParamSizes: 
         arrayParamTypes: []
@@ -25962,24 +26131,24 @@ MonoBehaviour:
       isGlobal: 0
     globalTransitions: []
     variables:
-      floatVariables: []
-      intVariables:
-      - useVariable: 1
-        name: showMoney
-        tooltip: 
-        showInInspector: 0
-        networkSync: 0
-        value: 0
+      floatVariables:
       - useVariable: 1
         name: showSpeed
         tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
+      intVariables: []
       boolVariables: []
       stringVariables:
       - useVariable: 1
         name: numberSpeed
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
+      - useVariable: 1
+        name: showMoney
         tooltip: 
         showInInspector: 0
         networkSync: 0
@@ -26309,6 +26478,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.SetIntValue
         - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.FindGameObject
         customNames:
         - 
@@ -26319,10 +26489,11 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101000101
-        actionIsOpen: 0000000001010100
-        actionStartIndex: 0000000004000000080000000c0000000f000000120000001500000018000000
-        actionHashCodes: 184b570409fbab0409fbab04603dd9059845b305603dd905603dd905786b3902
+        - 
+        actionEnabled: 010101010100000101
+        actionIsOpen: 000000000101010100
+        actionStartIndex: 0000000004000000080000000c0000000f0000001200000015000000180000001b000000
+        actionHashCodes: 184b570409fbab0409fbab04603dd9059845b305603dd905603dd9059845b305786b3902
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -26422,6 +26593,18 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 1
+          name: SpeedMoney
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         fsmIntParams:
         - useVariable: 1
           name: step
@@ -26478,12 +26661,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000000
+        byteData: 00000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000120000001300000014000000120000001100000001000000140000001200000011000000010000001000000010000000010000000f0000000f00000001000000100000001000000001000000100000001000000001000000120000001200000013000000
+        paramDataType: 1400000012000000120000001300000014000000120000001100000001000000140000001200000011000000010000001000000010000000010000000f0000000f000000010000001000000010000000010000001000000010000000010000000f0000000f00000001000000120000001200000013000000
         paramName:
         - gameObject
         - childName
@@ -26509,11 +26692,14 @@ MonoBehaviour:
         - intVariable
         - intValue
         - everyFrame
+        - floatVariable
+        - floatValue
+        - everyFrame
         - objectName
         - withTag
         - store
-        paramDataPos: 000000000000000001000000000000000100000002000000000000000000000002000000030000000100000001000000000000000100000002000000000000000100000003000000020000000300000004000000040000000500000005000000040000000500000001000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000000000000
+        paramDataPos: 000000000000000001000000000000000100000002000000000000000000000002000000030000000100000001000000000000000100000002000000000000000100000003000000020000000300000004000000040000000500000005000000020000000300000006000000040000000500000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000100000000000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000000000000
     - name: Create
       description: 
       colorIndex: 0
@@ -26643,7 +26829,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101010101
-        actionIsOpen: 0000000000
+        actionIsOpen: 0101010101
         actionStartIndex: 00000000050000000a0000000f00000012000000
         actionHashCodes: 0cdb04050cdb04050cdb04059845b3059845b305
         unityObjectParams: []
@@ -26977,7 +27163,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101010101
-        actionIsOpen: 000000010101
+        actionIsOpen: 010101010101
         actionStartIndex: 00000000050000000a0000000e0000001200000016000000
         actionHashCodes: bf83c900a0dd8303184b5704184b5704184b5704184b5704
         unityObjectParams: []
@@ -27631,7 +27817,7 @@ MonoBehaviour:
         customNames:
         - 
         actionEnabled: 01
-        actionIsOpen: 00
+        actionIsOpen: 01
         actionStartIndex: 00000000
         actionHashCodes: 603dd905
         unityObjectParams: []
@@ -29820,7 +30006,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 0101
-        actionIsOpen: 0000
+        actionIsOpen: 0101
         actionStartIndex: 0000000003000000
         actionHashCodes: 9845b3059845b305
         unityObjectParams: []
