@@ -3646,7 +3646,7 @@ MonoBehaviour:
         - 
         - 
         actionEnabled: 010101010101
-        actionIsOpen: 000000000001
+        actionIsOpen: 010001010001
         actionStartIndex: 0000000005000000080000000d0000001200000016000000
         actionHashCodes: 0cdb0405603dd9050cdb04050cdb0405ba7ea10148c01101
         unityObjectParams: []
@@ -4994,8 +4994,8 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
+        actionEnabled: 010001
+        actionIsOpen: 000001
         actionStartIndex: 000000000400000009000000
         actionHashCodes: 2a6e8a000cdb04051bcdca04
         unityObjectParams: []
@@ -5020,13 +5020,13 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: myIncome
+          name: myIncomeOld
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: SpeedMoney
+          name: Money
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -5038,7 +5038,7 @@ MonoBehaviour:
           networkSync: 0
           value: 0
         - useVariable: 1
-          name: SpeedMoney
+          name: Money
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -7387,7 +7387,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
