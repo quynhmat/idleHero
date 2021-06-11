@@ -9112,7 +9112,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 10000
+          value: 1000
         - useVariable: 1
           name: showNumber
           tooltip: 
