@@ -115,7 +115,7 @@ MonoBehaviour:
       hasBanner: 1
       hasInterstitial: 1
       hasRewarded: 1
-      directedForChildren: 0
+      directedForChildren: 1
     - platform: 1
       enabled: 0
       appId:
